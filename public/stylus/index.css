@@ -8,7 +8,7 @@ header.on {
   position: fixed;
   animation: headPos 1s ease;
   z-index: 50;
-  background: rgba(255,255,255,0.9);
+  background: rgba(255,255,255,0.8);
   top: 0;
   box-shadow: 0 0 10px #ccc;
 }

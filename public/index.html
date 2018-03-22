@@ -50,110 +50,7 @@
       </div>
     </div>
     <div class="navWrap">
-      <ul class="bannerNav">
-        <li class="navItem">
-          <a href="javascript:;">
-            <span>家庭保洁</span>
-            <img src="./images/right.png" alt="">
-          </a>
-          <ul>
-            <li><a href="javascript:;">小时工</a></li>
-            <li><a href="javascript:;">开荒保洁</a></li>
-            <li><a href="javascript:;">擦玻璃</a></li>
-            <li><a href="javascript:;">深度保洁</a></li>
-            <li><a href="javascript:;">杀虫除螨</a></li>
-            <li><a href="javascript:;">家具养护</a></li>
-          </ul>
-        </li>
-        <li class="navItem">
-          <a href="javascript:;">
-            <span>家庭保洁</span>
-            <img src="./images/right.png" alt="">
-            <ul>
-              <li><a href="javascript:;">小时工</a></li>
-              <li><a href="javascript:;">开荒保洁</a></li>
-              <li><a href="javascript:;">家具养护</a></li>
-            </ul>
-          </a>
-        </li>
-        <li class="navItem">
-          <a href="javascript:;">
-            <span>家庭保洁</span>
-            <img src="./images/right.png" alt="">
-            <ul>
-              <li><a href="javascript:;">家具养护</a></li>
-            </ul>
-          </a>
-        </li>
-        <li class="navItem">
-          <a href="javascript:;">
-            <span>家庭保洁</span>
-            <img src="./images/right.png" alt="">
-            <ul>
-              <li><a href="javascript:;">小时工</a></li>
-              <li><a href="javascript:;">深度保洁</a></li>
-              <li><a href="javascript:;">杀虫除螨</a></li>
-              <li><a href="javascript:;">家具养护</a></li>
-            </ul>
-          </a>
-        </li>
-        <li class="navItem">
-          <a href="javascript:;">
-            <span>家庭保洁</span>
-            <img src="./images/right.png" alt="">
-            <ul>
-              <li><a href="javascript:;">小时工</a></li>
-              <li><a href="javascript:;">开荒保洁</a></li>
-            </ul>
-          </a>
-        </li>
-        <li class="navItem">
-          <a href="javascript:;">
-            <span>家庭保洁</span>
-            <img src="./images/right.png" alt="">
-            <ul>
-              <li><a href="javascript:;">擦玻璃</a></li>
-              <li><a href="javascript:;">深度保洁</a></li>
-              <li><a href="javascript:;">杀虫除螨</a></li>
-              <li><a href="javascript:;">家具养护</a></li>
-            </ul>
-          </a>
-        </li>
-        <li class="navItem">
-          <a href="javascript:;">
-            <span>家庭保洁</span>
-            <img src="./images/right.png" alt="">
-            <ul>
-              <li><a href="javascript:;">家具养护</a></li>
-            </ul>
-          </a>
-        </li>
-        <li class="navItem">
-          <a href="javascript:;">
-            <span>家庭保洁</span>
-            <img src="./images/right.png" alt="">
-            <ul>
-              <li><a href="javascript:;">小时工</a></li>
-              <li><a href="javascript:;">开荒保洁</a></li>
-              <li><a href="javascript:;">擦玻璃</a></li>
-            </ul>
-          </a>
-        </li>
-        <li class="navItem">
-          <a href="javascript:;">
-            <span>家庭保洁</span>
-            <img src="./images/right.png" alt="">
-            <ul>
-              <li><a href="javascript:;">1</a></li>
-              <li><a href="javascript:;">2</a></li>
-              <li><a href="javascript:;">3</a></li>
-              <li><a href="javascript:;">4</a></li>
-              <li><a href="javascript:;">5</a></li>
-              <li><a href="javascript:;">6</a></li>
-            </ul>
-          </a>
-        </li>
-      </ul>
+      <ul class="bannerNav"></ul>
     </div>
   </div>
   <div class="serviceBox" style="background: #fff"></div>
@@ -217,7 +114,7 @@
         delay:3000,
         disableOnInteraction: false,
       },
-      effect:'fade',
+      effect:'fade', /*逐渐隐藏的轮播效果*/
       pagination: {
         el: '.swiper-pagination',
         clickable:true,
@@ -233,7 +130,22 @@
           $('#header').removeClass('on')
         }
       })
-      //二级菜单显示隐藏
+
+      //各种服务的请求
+      $.get('/getShop',function (data) {
+        $('.serviceBox').append(template('shop',{data:data}))
+        $('.navWrap>.bannerNav').append(template('erjimenu',{data:data}))
+        menu()
+      })
+
+      //城市请求
+      $.get('/getCity',function (data) {
+        $('.hotCity').append(template('city',{data:data}))
+      })
+    })
+
+    //二级菜单显示隐藏
+    function menu() {
       $('.bannerNav>li').mouseenter(function () {
         $(this).addClass('active')
         var $src = $(this).find('img').attr('src')
@@ -251,25 +163,12 @@
           right:'-35px'
         })
       })
-
       $('.navItem>ul>li').mouseenter(function () {
         $(this).addClass('on')
       }).mouseleave(function () {
         $(this).removeClass('on')
       })
-
-
-
-      //各种服务的请求
-      $.get('/getShop',function (data) {
-        $('.serviceBox').append(template('shop',{data:data}))
-      })
-      //城市请求
-      $.get('/getCity',function (data) {
-        $('.hotCity').append(template('city',{data:data}))
-      })
-
-    })
+    }
   </script>
   <script type="text/html" id="shop">
     {{each data}}
@@ -309,5 +208,20 @@
       </dd>
     </dl>
 </script>
+  <script type="text/html" id="erjimenu">
+    {{each data}}
+    <li class="navItem">
+      <a href="javascript:;">
+        <span>{{$value.serviceIndex}}</span>
+        <img src="./images/right.png" alt="">
+      </a>
+      <ul>
+        {{each $value.serviceType}}
+        <li><a href="javascript:;">{{$value}}</a></li>
+        {{/each}}
+      </ul>
+    </li>
+    {{/each}}
+  </script>
 </body>
 </html>

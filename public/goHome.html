@@ -156,7 +156,6 @@
       var page = 1
       var lastIndex = 0
       $('.showPage').on('click','a',function (event) {
-
           page = $(event.target).index()+1
           setGrey(page)
           $.get('/getComment?page='+page,function (data) {
@@ -164,11 +163,11 @@
             setTime(data)
             $('.commentList').html(template('scomm',{data:data}))
           })
+
         /*分页背景变红*/
         $(($('.showPage').find('a'))[lastIndex]).removeClass('active')
         $(event.target).addClass('active')
         lastIndex=$(event.target).index()
-
       })
 
       function setGrey(page){
@@ -189,11 +188,9 @@
           page--
           if(page<=1){
             page=1
+            $($('.showPage>a')[0]).addClass('active')
           }else {
             $($('.showPage>a')[page-1]).addClass('active')
-          }
-          if(page==1){
-            $($('.showPage>a')[0]).addClass('active')
           }
           setGrey(page)
           lastIndex=page-1
@@ -211,11 +208,9 @@
           if(page>=9){
             page=9
             $($('.showPage>a')[page-1]).addClass('active')
-
           }else {
             $($('.showPage>a')[page-1]).addClass('active')
           }
-
           setGrey(page)
           lastIndex=page-1
           $.get('/getComment?page='+page,function (data) {
