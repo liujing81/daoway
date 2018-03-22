@@ -84,45 +84,22 @@
         <span><a href="javascript:;">用户评论</a></span>
         <i>(10385条评论)</i>
       </h3>
-      <div class="commentList">
-       <!-- <div class="commentItem">
-          <img src="./images/service/0.jpg" alt="">
-          <ul>
-            <li>u***</li>
-            <li>
-              <span>
-                <img src="./images/service/red_star.png" alt="">
-                <img src="./images/service/red_star.png" alt="">
-                <img src="./images/service/red_star.png" alt="">
-                <img src="./images/service/red_star.png" alt="">
-                <img src="./images/service/red_star.png" alt="">
-              </span>
-              <em>2018-03-20</em>
-            </li>
-            <li class="commentdetail">OK</li>
-            <li class="commentposition">
-              <img src="./images/service/position.jpg" alt="">
-              深圳  罗湖区
-            </li>
-          </ul>
-        </div>-->
-      </div>
+      <div class="commentList"></div>
       <div class="fenye">
-        <a href="javascript:;" class="greycolor">上一页</a>
+        <a href="javascript:;" class="prev greycolor">上一页</a>
         <div class="showPage">
           <a href="javascript:;" class="active" >1</a>
-          <a href="javascript:;" onclick="fenye(2)">2</a>
-          <a href="javascript:;" onclick="fenye(3)">3</a>
-          <a href="javascript:;" onclick="fenye(4)">4</a>
-          <a href="javascript:;" onclick="fenye(5)">5</a>
-          <a href="javascript:;" onclick="fenye(6)">6</a>
-          <a href="javascript:;" onclick="fenye(7)">7</a>
-          <a href="javascript:;" onclick="fenye(8)">8</a>
-          <a href="javascript:;" onclick="fenye(9)">9</a>
-          <a href="javascript:;" onclick="fenye(10)">10</a>
+          <a href="javascript:;" >2</a>
+          <a href="javascript:;" >3</a>
+          <a href="javascript:;" >4</a>
+          <a href="javascript:;" >5</a>
+          <a href="javascript:;" >6</a>
+          <a href="javascript:;" >7</a>
+          <a href="javascript:;" >8</a>
+          <a href="javascript:;" >9</a>
           ...
         </div>
-        <a href="javascript:;">下一页</a>
+        <a href="javascript:;" class="next">下一页</a>
       </div>
     </div>
     <div class="centerRight">
@@ -175,14 +152,82 @@
     </dl>
   </script>
   <script type="text/javascript">
-    //分页请求
-    function fenye(page){
-        $.get('/getComment',{page:page},function (data) {
-          addStarImg(data)
-          setTime(data)
-          $('.commentList').html(template('scomm',{data:data}))
+      //分页请求
+      var page = 1
+      var lastIndex = 0
+      $('.showPage').on('click','a',function (event) {
+
+          page = $(event.target).index()+1
+          setGrey(page)
+          $.get('/getComment?page='+page,function (data) {
+            addStarImg(data)
+            setTime(data)
+            $('.commentList').html(template('scomm',{data:data}))
+          })
+        /*分页背景变红*/
+        $(($('.showPage').find('a'))[lastIndex]).removeClass('active')
+        $(event.target).addClass('active')
+        lastIndex=$(event.target).index()
+
+      })
+
+      function setGrey(page){
+        if(page==1){
+          $('.prev').addClass('greycolor')
+          $('.next').removeClass('greycolor')
+        }else if(page<9){
+          $('.prev').removeClass('greycolor')
+          $('.next').removeClass('greycolor')
+        }else{
+          $('.next').addClass('greycolor')
+          $('.prev').removeClass('greycolor')
+        }
+      }
+
+        $('.prev').click(function () {
+          $('.showPage>a').removeClass('active')
+          page--
+          if(page<=1){
+            page=1
+          }else {
+            $($('.showPage>a')[page-1]).addClass('active')
+          }
+          if(page==1){
+            $($('.showPage>a')[0]).addClass('active')
+          }
+          setGrey(page)
+          lastIndex=page-1
+          $.get('/getComment?page='+page,function (data) {
+            addStarImg(data)
+            setTime(data)
+            $('.commentList').html(template('scomm',{data:data}))
+          })
         })
-    }
+
+
+        $('.next').click(function () {
+          $('.showPage>a').removeClass('active')
+          page++
+          if(page>=9){
+            page=9
+            $($('.showPage>a')[page-1]).addClass('active')
+
+          }else {
+            $($('.showPage>a')[page-1]).addClass('active')
+          }
+
+          setGrey(page)
+          lastIndex=page-1
+          $.get('/getComment?page='+page,function (data) {
+            addStarImg(data)
+            setTime(data)
+            $('.commentList').html(template('scomm',{data:data}))
+          })
+        })
+
+
+
+
     //星星
     function addStarImg(data) {
       for (var i = 0; i < data.length; i++) {
@@ -199,7 +244,6 @@
       }
     }
 
-
     //时间
     function setTime(data) {
       for (var i = 0; i < data.length; i++) {
@@ -211,7 +255,6 @@
     }
 
     $(function () {
-
       //头部动画和定位
       $(document).scroll(function () {
         if($(document).scrollTop() >=70){
