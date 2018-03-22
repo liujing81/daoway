@@ -1,0 +1,323 @@
+body,
+html {
+  background: #fbf8f8;
+}
+header {
+  width: 100%;
+  height: 70px;
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+}
+header.on {
+  position: fixed;
+  animation: headPos 1s ease;
+  z-index: 50;
+  background: rgba(255,255,255,0.9);
+  top: 0;
+  box-shadow: 0 0 10px #ccc;
+}
+@-moz-keyframes headPos {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes headPos {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@-o-keyframes headPos {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes headPos {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+header .headerWrap {
+  box-sizing: border-box;
+  width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  z-index: 999;
+  padding: 2.5px 15px;
+  overflow: hidden;
+}
+header .headerWrap .navLeft {
+  height: 100%;
+  float: left;
+}
+header .headerWrap .navLeft a {
+  width: 280px;
+  height: 100%;
+  display: block;
+  position: relative;
+}
+header .headerWrap .navLeft a img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+header .headerWrap .navRight {
+  height: 100%;
+  float: right;
+}
+header .headerWrap .navRight ul {
+  height: 100%;
+  line-height: 70px;
+}
+header .headerWrap .navRight ul li {
+  margin: 0;
+  float: left;
+  padding-right: 30px;
+}
+header .headerWrap .navRight ul li.first {
+  box-sizing: border-box;
+  padding: 0 15px;
+  margin-right: 50px;
+}
+header .headerWrap .navRight ul li.first a span {
+  color: #4e4e4e;
+  font-weight: bold;
+}
+header .headerWrap .navRight ul li.first a img {
+  vertical-align: middle;
+}
+header .headerWrap .navRight ul li a {
+  color: #4e4e4e;
+  font-weight: bold;
+}
+header .headerWrap .navRight ul li a:hover {
+  color: #e94840;
+}
+header .headerWrap .navRight ul li.shangjia a {
+  width: 64px;
+  height: 20px;
+  color: #fff;
+  background: #e94840;
+  padding: 4px 6px;
+  border-radius: 5px;
+}
+.h2 {
+  line-height: 85px;
+  width: 1200px;
+  margin: 0 auto;
+  font-size: 18px;
+  font-weight: 600;
+}
+.centerWrap {
+  overflow: hidden;
+  width: 1200px;
+  margin: 0 auto;
+}
+.centerWrap .services {
+  width: 980px;
+  float: left;
+  margin-bottom: 50px;
+}
+.centerWrap .services .tabList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.centerWrap .services .tabList a {
+  background: #fff;
+  box-sizing: border-box;
+  display: block;
+  width: 24%;
+  float: left;
+  padding: 10px;
+  border: 1px solid #eaeaea;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.centerWrap .services .tabList a:hover {
+  box-shadow: 5px 5px 10px #ccc;
+}
+.centerWrap .services .tabList a img {
+  width: 100%;
+}
+.centerWrap .services .tabList a .name {
+  margin-top: 15px;
+  height: 26px;
+  line-height: 26px;
+}
+.centerWrap .services .tabList a .name img {
+  width: 18px;
+  margin-bottom: 5px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+.centerWrap .services .tabList a .name i {
+  font-style: normal;
+  font-size: 16px;
+  margin-left: 0.1rem;
+  font-weight: 700;
+  color: #333;
+}
+.centerWrap .services .tabList a .order {
+  font-size: 12px;
+  color: #929292;
+  height: 26px;
+  line-height: 26px;
+  margin: 0;
+}
+.centerWrap .services .tabList a .order i {
+  float: right;
+  font-style: normal;
+}
+.centerWrap .services .getMore {
+  width: 100%;
+  margin: 0 auto;
+  height: 152px;
+  text-align: center;
+}
+.centerWrap .services .getMore.dis {
+  display: none;
+}
+.centerWrap .services .getMore span {
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  margin: 50px 5px;
+  background: #fff;
+  display: inline-block;
+  font-size: 16px;
+  color: #b1b1b1;
+  cursor: pointer;
+}
+.centerWrap .services .getMore img {
+  margin-left: -55px;
+  vertical-align: middle;
+}
+.centerWrap .jiameng {
+  float: right;
+  width: 220px;
+  height: 304px;
+}
+.centerWrap .jiameng img {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+.centerWrap .jiameng .erweima {
+  width: 100%;
+  height: 290px;
+  background: url("../images/tuijianfuwushang_06.jpg") no-repeat center;
+  margin-top: 10px;
+}
+.centerWrap .jiameng .erweima img {
+  margin: 50px 0 0 50px;
+  width: 130px;
+  height: 130px;
+}
+.baozhang {
+  text-align: center;
+  width: 100%;
+  padding-top: 60px;
+  background: #fff;
+}
+.baozhang h2 {
+  font-size: 30px;
+  font-family: "微软雅黑";
+  font-weight: 800;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.baozhang h2 i {
+  font-style: normal;
+  color: #fb474f;
+  font-weight: 800;
+}
+.baozhang p {
+  font-size: 22px;
+  color: #3d3838;
+  margin: 0;
+}
+.servi {
+  width: 100%;
+  padding-top: 20px;
+  background: #fff;
+  height: 66px;
+  font-family: "微软雅黑";
+}
+.servi ul {
+  width: 420px;
+  margin: 0 auto;
+  display: flex;
+  text-align: center;
+}
+.servi ul li {
+  width: 33.33%;
+  font-size: 18px;
+}
+.servi ul li a {
+  color: #1d1515;
+}
+.servi ul li a img {
+  vertical-align: middle;
+}
+.hotCity {
+  width: 100%;
+  padding-top: 50px;
+  height: 170px;
+  background: #fff;
+}
+.hotCity dl {
+  width: 1200px;
+  margin: 0 auto;
+}
+.hotCity dl dt {
+  float: left;
+  font-family: " 微软雅黑";
+  font-size: 18px;
+  font-weight: 700;
+}
+.hotCity dl dd {
+  margin-left: 30px;
+  width: 1090px;
+  line-height: 30px;
+  float: left;
+}
+.hotCity dl dd a {
+  font-size: 16px;
+  color: #898989;
+  display: inline-block;
+  width: 9%;
+  text-align: center;
+  font-weight: 200;
+  cursor: pointer;
+  font-family: "微软雅黑";
+}
+.banquan {
+  height: 40px;
+  line-height: 40px;
+  padding-top: 0;
+  width: 100%;
+}
+.banquan p {
+  width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+  color: #898989;
+  font-size: 14px;
+}

@@ -1,0 +1,405 @@
+body,
+html {
+  background-color: #fbf8f8;
+}
+header {
+  width: 100%;
+  height: 70px;
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+}
+header.on {
+  position: fixed;
+  animation: headPos 1s ease;
+  z-index: 50;
+  top: 0;
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 0 10px #ccc;
+}
+@-moz-keyframes headPos {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes headPos {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@-o-keyframes headPos {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes headPos {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+header .headerWrap {
+  box-sizing: border-box;
+  width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  z-index: 999;
+  padding: 2.5px 15px;
+  overflow: hidden;
+}
+header .headerWrap .navLeft {
+  height: 100%;
+  float: left;
+}
+header .headerWrap .navLeft a {
+  width: 280px;
+  height: 100%;
+  display: block;
+  position: relative;
+}
+header .headerWrap .navLeft a img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+header .headerWrap .navRight {
+  height: 100%;
+  float: right;
+}
+header .headerWrap .navRight ul {
+  height: 100%;
+  line-height: 70px;
+}
+header .headerWrap .navRight ul li {
+  margin: 0;
+  float: left;
+  padding-right: 30px;
+}
+header .headerWrap .navRight ul li.first {
+  box-sizing: border-box;
+  padding: 0 15px;
+  margin-right: 50px;
+}
+header .headerWrap .navRight ul li.first a span {
+  color: #4e4e4e;
+  font-weight: bold;
+}
+header .headerWrap .navRight ul li.first a img {
+  vertical-align: middle;
+}
+header .headerWrap .navRight ul li a {
+  color: #4e4e4e;
+  font-weight: bold;
+}
+header .headerWrap .navRight ul li a:hover {
+  color: #e94840;
+}
+header .headerWrap .navRight ul li.shangjia a {
+  width: 64px;
+  height: 20px;
+  color: #fff;
+  background: #e94840;
+  padding: 4px 6px;
+  border-radius: 5px;
+}
+.centerWrap {
+  width: 1200px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 22px;
+}
+.centerWrap h2 {
+  line-height: 85px;
+  width: 1200px;
+  margin: 0 auto;
+  font-size: 18px;
+  font-weight: 600;
+}
+.centerWrap h2 i {
+  margin: 0 10px;
+  font-weight: normal;
+}
+.centerWrap .centerLeft {
+  float: left;
+  margin-bottom: 50px;
+  width: 960px;
+}
+.centerWrap .centerLeft a {
+  display: block;
+  height: 218px;
+  border: 1px solid #e5e5e5;
+  cursor: pointer;
+  background: #fff;
+}
+.centerWrap .centerLeft a img {
+  margin: 25px;
+  border: 1px solid #e5e5e5;
+  float: left;
+  vertical-align: middle;
+  width: 150px;
+  height: 150px;
+}
+.centerWrap .centerLeft a .text {
+  margin-top: 25px;
+  float: left;
+}
+.centerWrap .centerLeft a .text p:nth-child(1) {
+  font-size: 18px;
+  color: #1d1515;
+  line-height: 42px;
+  height: 42px;
+}
+.centerWrap .centerLeft a .text .price {
+  line-height: 42px;
+  height: 42px;
+  color: #1d1515;
+  font-size: 14px;
+}
+.centerWrap .centerLeft a .text .price >b {
+  font-size: 20px;
+  color: #fc545e;
+  font-weight: 700;
+}
+.centerWrap .centerLeft a .text .price >b em {
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 700;
+}
+.centerWrap .centerLeft a .text .price >span {
+  margin-left: 40px;
+  font-size: 14px;
+  color: #898989;
+}
+.centerWrap .centerLeft a .text .price >span em {
+  font-style: normal;
+  text-decoration: line-through;
+  font-size: 14px;
+}
+.centerWrap .centerLeft a .text .yishou {
+  color: #1d1515;
+  font-size: 14px;
+  margin-top: 15px;
+}
+.centerWrap .centerLeft a .text .yishou em {
+  color: #fb474f;
+  margin-left: 10px;
+  font-style: normal;
+}
+.centerWrap .centerLeft a .saoma {
+  float: right;
+  margin: 20px 60px 0 0;
+}
+.centerWrap .centerLeft a .saoma img {
+  width: 115px;
+  height: 115px;
+  vertical-align: middle;
+  margin: 0;
+  border: 0;
+}
+.centerWrap .centerLeft a .saoma b {
+  color: #333;
+  display: block;
+  text-align: center;
+  line-height: 30px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+}
+.centerWrap .centerLeft a .saoma b:nth-child(3) {
+  color: #fb474f;
+}
+.centerWrap .centerLeft .shopDetail {
+  background: #fff;
+  padding: 30px 20px;
+  border: 1px solid #e5e5e5;
+  margin-top: 10px;
+}
+.centerWrap .centerLeft .shopDetail b {
+  box-sizing: border-box;
+  font-size: 14px;
+  border-bottom: 3px solid #fb474f;
+  padding: 5px;
+  margin-top: 10px;
+  width: 66px;
+  display: block;
+  font-weight: 700;
+}
+.centerWrap .centerLeft .shopDetail pre {
+  line-height: 24px;
+  margin: 15px 0 5px;
+  font-size: 14px;
+  display: block;
+  padding: 9.5px;
+}
+.centerWrap .centerLeft .shopDetail p {
+  line-height: 24px;
+  margin: 15px 0 5px;
+  font-size: 14px;
+}
+.centerWrap .centerLeft .shopDetail p i {
+  margin-left: 20px;
+  font-style: normal;
+}
+.centerWrap .centerLeft .shopDetail p i em {
+  color: #fb474f;
+  font-style: normal;
+}
+.centerWrap .centerRight {
+  margin-left: 10px;
+  float: left;
+  width: 230px;
+}
+.centerWrap .centerRight .shops {
+  border: 1px solid #e5e5e5;
+  background: #fff;
+  text-align: center;
+}
+.centerWrap .centerRight .shops h3 {
+  font-size: 20px;
+  padding-left: 10px;
+  border-bottom: 1px solid #e5e5e5;
+  height: 60px;
+  line-height: 60px;
+  text-align: left;
+  font-weight: 600;
+}
+.centerWrap .centerRight .shops img {
+  text-align: center;
+  margin: 40px 50px 5px;
+  width: 80px;
+  height: 80px;
+}
+.centerWrap .centerRight .shops p {
+  text-align: left;
+  padding: 0 10px;
+  line-height: 36px;
+  color: #333;
+}
+.centerWrap .centerRight .shops p:nth-child(3) {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.centerWrap .centerRight .shops p i {
+  font-style: normal;
+  float: right;
+  color: #fb474f;
+}
+.centerWrap .centerRight .erweima {
+  width: 100%;
+  height: 290px;
+}
+.centerWrap .centerRight .erweima img {
+  margin: 50px 0 0 50px;
+  width: 130px;
+  height: 130px;
+}
+.centerWrap .centerRight .erweima.erweimaBottom {
+  margin-top: 10px;
+  background: url("../images/service/tuijianfuwushang_06.jpg");
+  background-repeat: no-repeat;
+}
+.baozhang {
+  text-align: center;
+  width: 100%;
+  padding-top: 60px;
+  background: #fff;
+}
+.baozhang h2 {
+  font-size: 30px;
+  font-family: "微软雅黑";
+  font-weight: 800;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.baozhang h2 i {
+  font-style: normal;
+  color: #fb474f;
+  font-weight: 800;
+}
+.baozhang p {
+  font-size: 22px;
+  color: #3d3838;
+  margin: 0;
+}
+.servi {
+  width: 100%;
+  padding-top: 20px;
+  background: #fff;
+  height: 66px;
+  font-family: "微软雅黑";
+}
+.servi ul {
+  width: 420px;
+  margin: 0 auto;
+  display: flex;
+  text-align: center;
+}
+.servi ul li {
+  width: 33.33%;
+  font-size: 18px;
+}
+.servi ul li a {
+  color: #1d1515;
+}
+.servi ul li a img {
+  vertical-align: middle;
+}
+.hotCity {
+  width: 100%;
+  padding-top: 50px;
+  height: 170px;
+  background: #fff;
+}
+.hotCity dl {
+  width: 1200px;
+  margin: 0 auto;
+}
+.hotCity dl dt {
+  float: left;
+  font-family: " 微软雅黑";
+  font-size: 18px;
+  font-weight: 700;
+}
+.hotCity dl dd {
+  margin-left: 30px;
+  width: 1090px;
+  line-height: 30px;
+  float: left;
+}
+.hotCity dl dd a {
+  font-size: 16px;
+  color: #898989;
+  display: inline-block;
+  width: 9%;
+  text-align: center;
+  font-weight: 200;
+  cursor: pointer;
+  font-family: "微软雅黑";
+}
+.banquan {
+  height: 40px;
+  line-height: 40px;
+  padding-top: 0;
+  width: 100%;
+}
+.banquan p {
+  width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+  color: #898989;
+  font-size: 14px;
+}

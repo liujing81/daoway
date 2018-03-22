@@ -1,0 +1,337 @@
+//头部样式
+header
+  width 100%
+  height 70px
+  background #fff
+  border-bottom 1px solid #e5e5e5
+  &.on
+    position fixed
+    animation:headPos 1s ease;
+    z-index 50
+    background rgba(255,255,255,.9)
+    top 0
+    box-shadow: 0 0 10px #ccc;
+    @keyframes headPos {
+      from {
+        transform translateY(-100%)
+      }
+      to {
+        transform translateY(0)
+      }
+    }
+  .headerWrap
+    box-sizing border-box
+    width 1200px
+    margin 0 auto
+    height 100%
+    z-index  999
+    padding  2.5px 15px
+    overflow hidden
+    .navLeft
+      height 100%
+      float left
+      a
+        width 280px
+        height 100%
+        display block
+        position relative
+        img
+          position absolute
+          top 0
+          bottom 0
+          left 0
+          right 0
+          margin auto
+    .navRight
+      height 100%
+      float right
+      ul
+        height 100%
+        line-height 70px
+        li
+          margin 0
+          float left
+          padding-right 30px
+          &.first
+            box-sizing border-box
+            padding 0 15px
+            margin-right 50px
+            a
+              span
+                color #4e4e4e
+                font-weight bold
+              img
+                vertical-align middle
+          a
+            color #4e4e4e
+            font-weight bold
+            &:hover
+              color #e94840
+          &.shangjia
+            a
+              width 64px
+              height 20px
+              color #fff
+              background #e94840
+              padding 4px 6px
+              border-radius 5px
+//轮播和轮播导航
+.bannerNav
+  width 100%
+  position relative
+  .bannerWrap
+    width 100%
+    .swiper-container
+      width 100%
+      .swiper-wrapper
+        width 100%
+        .swiper-slide
+          width 100%
+          display block
+          >img
+            display block
+            width 100%
+            height 420px
+      .swiper-pagination
+        .swiper-pagination-bullet-active
+          background-color #fff
+  .navWrap
+    width 180px
+    position absolute
+    top 0px
+    left 100px
+    z-index 5
+    .bannerNav
+      width 100%
+      background #757881
+      height 420px
+
+      .navItem
+        height 42px
+        line-height 42px
+        font-size 16px
+        font-weight bold
+        cursor pointer
+        padding-left 45px
+        &.active
+          background #60646D
+          ul
+            display block
+        a
+          color #fff
+          position relative
+          span
+            font-weight bold
+            text-align-last justify
+            display inline-block
+            width 70px
+          img
+            position absolute
+            right -30px
+            top 8px
+        ul
+          display none
+          position absolute
+          top 0
+          left 180px
+          background rgba(255,255,255,0.9)
+          width 160px
+          height 420px
+
+          li
+            height 42px
+            line-height 42px
+            color rgba(255,255,255,.6)
+            font-size 16px
+            cursor pointer
+            padding-left 45px
+            &.on
+              a
+                color red
+            a
+              font-weight bold
+              color #121212
+//各种服务
+.serviceBox
+  padding-bottom 20px
+  .service
+    width 1200px
+    margin 0 auto
+    padding 50px 0 0
+    .serviceTitle
+      text-align center
+      position relative
+      .sIndex
+        color #3d3838
+        font-weight 800
+        font-size 28px
+        font-family "Microsoft YaHei"
+        margin-bottom 15px
+      .sType
+        font-size 22px
+        font-family "幼圆"
+        a
+          color #3d3838
+          &:hover
+            color #fb474f
+      .sMore
+        position absolute
+        font-size 18px
+        color #898989
+        top 30px
+        right 0
+    .serviceList
+      margin-top 10px
+      display flex
+      a
+        box-sizing border-box
+        display block
+        width 20%
+        float left
+        padding 10px
+        border 1px solid #eaeaea
+        margin 0 5px
+        cursor pointer
+        height 345px
+        &:hover
+          box-shadow 5px 5px 10px #ccc
+        img
+          width 100%
+        .sName
+          padding-top 10px
+          font-weight 800
+          color #000
+          height 18px
+          white-space nowrap
+          text-overflow ellipsis
+        .desc
+          color #929292
+          padding 5px 0
+          font-size 13px
+          line-height 18px
+          height 48px
+        .price
+          font-size 14px
+          padding 5px 5px
+          font-weight 600
+          height 20px
+          line-height 20px
+          color #fb474f
+          overflow hidden
+          span:nth-child(1)
+            font-size 20px
+            float left
+            font-weight bold
+          span:nth-child(2)
+            float right
+            width 76px
+            height 24px
+            line-height 22px
+            text-align center
+            background #fb474f
+            border-radius 5px
+            color #fff
+//保障
+.baozhang
+  text-align center
+  width 100%
+  padding-top 60px
+  background #fff
+  h2
+    font-size 30px
+    font-family "微软雅黑"
+    font-weight 800
+    margin-top 20px
+    margin-bottom 10px
+    i
+      font-style normal
+      color: #fb474f;
+      font-weight 800
+  p
+    font-size 22px
+    color #3d3838
+    margin 0
+//底部三个绿钩
+.servi
+  width 100%
+  padding-top 20px
+  background #fff
+  height 66px
+  font-family "微软雅黑"
+  ul
+    width 420px
+    margin 0 auto
+    display flex
+    text-align center
+    li
+      width 33.33%
+      font-size 18px
+      a
+        color #1d1515
+        img
+          vertical-align middle
+//热门城市
+.hotCity
+  width 100%
+  padding-top 50px
+  height 170px
+  background #fff
+  dl
+    width 1200px
+    margin 0 auto
+    dt
+      float left
+      font-family " 微软雅黑"
+      font-size 18px
+      font-weight 700
+    dd
+      margin-left 30px
+      width 1090px
+      line-height 30px
+      float left
+      a
+        font-size 16px
+        color #898989
+        display inline-block
+        width 9%
+        text-align center
+        font-weight 200
+        cursor pointer
+        font-family "微软雅黑"
+//合作伙伴
+.partner
+  padding-top 50px
+  p
+    margin 0 auto
+    font-weight bold
+    width 1200px
+    color #1d1515
+    font-size 18px
+  ul
+    width 1200px
+    margin 0 auto
+    display flex
+    flex-wrap wrap
+    li
+      width 10%
+      height 60px
+      text-align center
+      background #fff
+      margin-left 0.8%
+      line-height 55px
+      cursor pointer
+      margin-top 20px
+      img
+        width 100%
+//版权
+.banquan
+  height 40px
+  line-height 40px
+  padding-top 0
+  width 100%
+  p
+    width 1200px
+    margin 0 auto
+    text-align left
+    color #898989
+    font-size 14px

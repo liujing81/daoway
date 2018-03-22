@@ -1,0 +1,328 @@
+body,html
+  background-color #fbf8f8
+//头部样式
+header
+  width 100%
+  height 70px
+  background #fff
+  border-bottom 1px solid #e5e5e5
+  &.on
+    position fixed
+    animation:headPos 1s ease;
+    z-index 50
+    top 0
+    background rgba(255,255,255,.9)
+    box-shadow: 0 0 10px #ccc;
+    @keyframes headPos {
+      from {
+        transform translateY(-100%)
+      }
+      to {
+        transform translateY(0)
+      }
+    }
+  .headerWrap
+    box-sizing border-box
+    width 1200px
+    margin 0 auto
+    height 100%
+    z-index  999
+    padding  2.5px 15px
+    overflow hidden
+    .navLeft
+      height 100%
+      float left
+      a
+        width 280px
+        height 100%
+        display block
+        position relative
+        img
+          position absolute
+          top 0
+          bottom 0
+          left 0
+          right 0
+          margin auto
+    .navRight
+      height 100%
+      float right
+      ul
+        height 100%
+        line-height 70px
+        li
+          margin 0
+          float left
+          padding-right 30px
+          &.first
+            box-sizing border-box
+            padding 0 15px
+            margin-right 50px
+            a
+              span
+                color #4e4e4e
+                font-weight bold
+              img
+                vertical-align middle
+          a
+            color #4e4e4e
+            font-weight bold
+            &:hover
+              color #e94840
+          &.shangjia
+            a
+              width 64px
+              height 20px
+              color #fff
+              background #e94840
+              padding 4px 6px
+              border-radius 5px
+//中间部分
+.centerWrap
+  width 1200px
+  overflow hidden
+  margin 0 auto
+  margin-top 22px
+  h2
+    line-height 85px
+    width 1200px
+    margin 0 auto
+    font-size 18px
+    font-weight 600
+    i
+      margin 0 10px
+      font-weight normal
+  .centerLeft
+    float left
+    margin-bottom 50px
+    width 960px
+    a
+      display block
+      height 218px
+      border 1px solid #e5e5e5
+      cursor pointer
+      background #fff
+      img
+        margin 25px
+        border 1px solid #e5e5e5
+        float left
+        vertical-align middle
+        width 150px
+        height 150px
+      .text
+        margin-top 25px
+        float: left;
+        p:nth-child(1)
+          font-size 18px
+          color #1d1515
+          line-height 42px
+          height 42px
+        .price
+          line-height 42px
+          height 42px
+          color #1d1515
+          font-size 14px
+          >b
+            font-size 20px
+            color #fc545e
+            font-weight 700
+            em
+              font-style normal
+              font-size 14px
+              font-weight 700
+          >span
+            margin-left 40px
+            font-size 14px
+            color #898989
+            em
+              font-style normal
+              text-decoration line-through
+              font-size 14px
+        .yishou
+          color #1d1515
+          font-size 14px
+          margin-top 15px
+          em
+            color #fb474f
+            margin-left 10px
+            font-style normal
+
+
+
+      .saoma
+        float right
+        margin 20px 60px 0 0
+        img
+          width 115px
+          height 115px
+          vertical-align middle
+          margin 0
+          border 0
+        b
+          color #333
+          display block
+          text-align center
+          line-height 30px
+          font-size 16px
+          font-style normal
+          font-weight 700
+          &:nth-child(3)
+            color #fb474f
+
+    .shopDetail
+      background #fff
+      padding 30px 20px
+      border 1px solid #e5e5e5
+      margin-top 10px
+      b
+        box-sizing border-box
+        font-size 14px
+        border-bottom 3px solid #fb474f
+        padding 5px
+        margin-top 10px
+        width 66px
+        display block
+        font-weight 700
+      pre
+        line-height 24px
+        margin 15px 0 5px
+        font-size 14px
+        display block
+        padding 9.5px
+      p
+        line-height 24px
+        margin 15px 0 5px
+        font-size 14px
+        i
+          margin-left 20px
+          font-style normal
+          em
+            color #fb474f
+            font-style normal
+  .centerRight
+    margin-left 10px
+    float left
+    width 230px
+    .shops
+      border 1px solid #e5e5e5
+      background #fff
+      text-align center
+      h3
+        font-size 20px
+        padding-left 10px
+        border-bottom 1px solid #e5e5e5
+        height 60px
+        line-height 60px
+        text-align left
+        font-weight 600
+
+      img
+        text-align center
+        margin 40px 50px 5px
+        width 80px
+        height 80px
+      p
+        text-align left
+        padding 0 10px
+        line-height 36px
+        color #333
+        &:nth-child(3)
+          text-align center
+          margin-bottom 20px
+          font-weight bold
+        i
+          font-style normal
+          float right
+          color #fb474f
+    .erweima
+      width: 100%;
+      height: 290px;
+      img
+        margin: 50px 0 0 50px;
+        width: 130px;
+        height: 130px;
+      &.erweimaBottom
+        margin-top 10px
+        background url("../images/service/tuijianfuwushang_06.jpg")
+        background-repeat no-repeat
+
+
+//保障
+.baozhang
+  text-align center
+  width 100%
+  padding-top 60px
+  background #fff
+  h2
+    font-size 30px
+    font-family "微软雅黑"
+    font-weight 800
+    margin-top 20px
+    margin-bottom 10px
+    i
+      font-style normal
+      color: #fb474f;
+      font-weight 800
+  p
+    font-size 22px
+    color #3d3838
+    margin 0
+//底部三个绿钩
+.servi
+  width 100%
+  padding-top 20px
+  background #fff
+  height 66px
+  font-family "微软雅黑"
+  ul
+    width 420px
+    margin 0 auto
+    display flex
+    text-align center
+    li
+      width 33.33%
+      font-size 18px
+      a
+        color #1d1515
+        img
+          vertical-align middle
+//热门城市
+.hotCity
+  width 100%
+  padding-top 50px
+  height 170px
+  background #fff
+  dl
+    width 1200px
+    margin 0 auto
+    dt
+      float left
+      font-family " 微软雅黑"
+      font-size 18px
+      font-weight 700
+    dd
+      margin-left 30px
+      width 1090px
+      line-height 30px
+      float left
+      a
+        font-size 16px
+        color #898989
+        display inline-block
+        width 9%
+        text-align center
+        font-weight 200
+        cursor pointer
+        font-family "微软雅黑"
+//版权
+.banquan
+  height 40px
+  line-height 40px
+  padding-top 0
+  width 100%
+  p
+    width 1200px
+    margin 0 auto
+    text-align left
+    color #898989
+    font-size 14px

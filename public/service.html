@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>服务商</title>
+  <link rel="stylesheet" href="./stylesheets/reset.css">
+  <link rel="stylesheet" href="./stylus/service.css">
+  <script type="text/javascript" src="./javascripts/jquery-1.10.1.js"></script>
+  <script type="text/javascript" src="./javascripts/template-web.js"></script>
+</head>
+<body>
+  <header id="header">
+  <div class="headerWrap">
+    <div class="navLeft">
+      <a href="javascript:;">
+        <img src="./images/logo.png" alt="">
+      </a>
+    </div>
+    <div class="navRight">
+      <ul>
+        <li class="first">
+          <a href="javascript:;">
+            <img src="./images/main/citypoint.png" alt="">
+            <span>北京</span>
+            <a>切换城市</a>
+          </a>
+        </li>
+        <li><a href="/index.html">首页</a></li>
+        <li><a href="javascript:;">到位APP</a></li>
+        <li><a href="/service.html">服务商</a></li>
+        <li><a href="javascript:;">商家入驻</a></li>
+        <li><a href="javascript:;">风云APP</a></li>
+        <li><a href="javascript:;">关于我们</a></li>
+        <li class="shangjia"><a href="javascript:;">商家登陆</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+  <h2 class="h2">服务商</h2>
+  <div class="centerWrap">
+    <div class="services">
+      <div class="tabList"></div>
+      <div class="getMore">
+        <span>查看更多商家</span>
+        <img src="./images/fuwu_down2.jpg" alt="">
+      </div>
+    </div>
+    <div class="jiameng">
+      <img src="./images/tuijianfuwushang_03.jpg" alt="">
+      <div class="erweima">
+        <img src="./images/daowayApp.png" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="baozhang">
+    <h2>到位<i>服务</i>保障</h2>
+    <p>到位平台担保交易安全，交易未成功100%退款</p>
+  </div>
+  <div class="servi">
+    <ul>
+      <li>
+        <a href="javascript:;">
+          <img src="./images/anquan.jpg" alt="">
+          优选服务
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;">
+          <img src="./images/anquan.jpg" alt="">
+          全程保障
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;">
+          <img src="./images/anquan.jpg" alt="">
+          安全无忧
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="hotCity"></div>
+  <div class="banquan" style="background: #FBF8F8">
+    <p>©2015 版权所有 到位 daoway.com 京ICP备15001471号-1 北京邻家科技有限公司</p>
+  </div>
+  <script type="text/javascript">
+    $(function () {
+      //头部动画和定位
+      $(document).scroll(function () {
+        if($(document).scrollTop() >=70){
+          $('#header').addClass('on')
+        }else {
+          $('#header').removeClass('on')
+        }
+      })
+      //城市请求
+      $.get('/getCity',function (data) {
+        $('.hotCity').append(template('city',{data:data}))
+      })
+      //tablist请求
+      $.get('/getService',function (data) {
+        $('.tabList').append(template('sList',{data:data}))
+      })
+      $('.getMore').click(function () {
+        $('.getMore').addClass('dis')
+      })
+    })
+  </script>
+  <script type="text/html" id="city">
+    <dl>
+      <dt>热门城市</dt>
+      <dd>
+        {{each data}}
+        <a href="javascript:;">{{$value.name}}</a>
+        {{/each}}
+      </dd>
+    </dl>
+  </script>
+  <script type="text/html" id="sList">
+    {{each data}}
+    <a href="/goHome.html">
+      <img src={{$value.imgUrl}} alt="">
+      <p class="name">
+        <img src="./images/home1.png" alt="">
+        <i>{{$value.title}}</i>
+      </p>
+      <p class="order">
+        已接单{{$value.orderCount}}单
+        <i>好评{{$value.positiveRate}}</i>
+      </p>
+    </a>
+    {{/each}}
+  </script>
+</body>
+</html>

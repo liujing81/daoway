@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>十分到家</title>
+  <link rel="stylesheet" href="./stylesheets/reset.css">
+  <link rel="stylesheet" href="./stylus/goHome.css">
+  <script type="text/javascript" src="./javascripts/jquery-1.10.1.js"></script>
+  <script type="text/javascript" src="./javascripts/template-web.js"></script>
+  <script src="https://cdn.bootcss.com/moment.js/2.21.0/moment.min.js"></script>
+</head>
+<body>
+  <header id="header">
+  <div class="headerWrap">
+    <div class="navLeft">
+      <a href="javascript:;">
+        <img src="./images/logo.png" alt="">
+      </a>
+    </div>
+    <div class="navRight">
+      <ul>
+        <li class="first">
+          <a href="javascript:;">
+            <img src="./images/main/citypoint.png" alt="">
+            <span>北京</span>
+            <a>切换城市</a>
+          </a>
+        </li>
+        <li><a href="/index.html">首页</a></li>
+        <li><a href="javascript:;">到位APP</a></li>
+        <li><a href="/service.html">服务商</a></li>
+        <li><a href="javascript:;">商家入驻</a></li>
+        <li><a href="javascript:;">风云APP</a></li>
+        <li><a href="javascript:;">关于我们</a></li>
+        <li class="shangjia"><a href="javascript:;">商家登陆</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+  <div class="sfWrap">
+    <div class="sfdj">
+      <div class="sfLeft">
+        <b>十分到家</b>
+        <i>
+          营业时间：
+          <em>08:30-21:30</em>
+        </i>
+        <i>
+          最近可预约时间：
+          <em>03月20日 08:30</em>
+        </i>
+      </div>
+      <div class="sfRight">
+        <div><i>5245</i>成功接单<em>|</em></div>
+        <div><i>86%</i>接单率<em>|</em></div>
+        <div><i>96%</i>好评率</div>
+      </div>
+    </div>
+  </div>
+  <div class="sfNav">
+    <ul>
+      <li class="active"><a href="javascript:;">服务项目</a></li>
+      <li><a href="javascript:;">商家简介</a></li>
+      <li><a href="javascript:;">用户评论</a></li>
+    </ul>
+  </div>
+  <div class="centerWrap">
+    <div class="centerLeft">
+      <h3>
+        <span><a href="javascript:;">服务项目</a></span>
+      </h3>
+      <a href="detail.html" class="sPro"></a>
+      <div class="blankBox"></div>
+      <h3>
+        <span><a href="javascript:;">商家简介</a></span>
+      </h3>
+      <div class="company">
+        <span>上海家谐网络科技有限公司</span>
+        <img src="./images/service/renzheng.jpg" alt="">
+        <p>云家政是家政服务在线预订平台。我们的目标是让每个家庭都能获得诚信、便捷、有保障的家政服务。云家政拥有国内最大的实名认证家庭服务员数据库，目前平台上有超过100000名专业服务人员；数百个家政服务商，遍布全国主要城市各个社区。
+          云家政倡导简单、轻松的生活方式。通过把分散的家政服务能力汇集和分配，让中国家庭获得诚信、便捷、有保障的家政服务，解决日常生活中的麻烦事，把更多时间留给自己和家人，提高生活品质。</p>
+      </div>
+      <h3>
+        <span><a href="javascript:;">用户评论</a></span>
+        <i>(10385条评论)</i>
+      </h3>
+      <div class="commentList">
+       <!-- <div class="commentItem">
+          <img src="./images/service/0.jpg" alt="">
+          <ul>
+            <li>u***</li>
+            <li>
+              <span>
+                <img src="./images/service/red_star.png" alt="">
+                <img src="./images/service/red_star.png" alt="">
+                <img src="./images/service/red_star.png" alt="">
+                <img src="./images/service/red_star.png" alt="">
+                <img src="./images/service/red_star.png" alt="">
+              </span>
+              <em>2018-03-20</em>
+            </li>
+            <li class="commentdetail">OK</li>
+            <li class="commentposition">
+              <img src="./images/service/position.jpg" alt="">
+              深圳  罗湖区
+            </li>
+          </ul>
+        </div>-->
+      </div>
+      <div class="fenye">
+        <a href="javascript:;" class="greycolor">上一页</a>
+        <div class="showPage">
+          <a href="javascript:;" class="active" >1</a>
+          <a href="javascript:;" onclick="fenye(2)">2</a>
+          <a href="javascript:;" onclick="fenye(3)">3</a>
+          <a href="javascript:;" onclick="fenye(4)">4</a>
+          <a href="javascript:;" onclick="fenye(5)">5</a>
+          <a href="javascript:;" onclick="fenye(6)">6</a>
+          <a href="javascript:;" onclick="fenye(7)">7</a>
+          <a href="javascript:;" onclick="fenye(8)">8</a>
+          <a href="javascript:;" onclick="fenye(9)">9</a>
+          <a href="javascript:;" onclick="fenye(10)">10</a>
+          ...
+        </div>
+        <a href="javascript:;">下一页</a>
+      </div>
+    </div>
+    <div class="centerRight">
+      <div class="erweima erweimaTop">
+        <img src="./images/二维码.png" alt="">
+      </div>
+      <div class="erweima erweimaBottom">
+        <img src="./images/service/daowayApp.png" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="baozhang">
+    <h2>到位<i>服务</i>保障</h2>
+    <p>到位平台担保交易安全，交易未成功100%退款</p>
+  </div>
+  <div class="servi">
+    <ul>
+      <li>
+        <a href="javascript:;">
+          <img src="./images/anquan.jpg" alt="">
+          优选服务
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;">
+          <img src="./images/anquan.jpg" alt="">
+          全程保障
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;">
+          <img src="./images/anquan.jpg" alt="">
+          安全无忧
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="hotCity"></div>
+  <div class="banquan" style="background: #FBF8F8">
+    <p>©2015 版权所有 到位 daoway.com 京ICP备15001471号-1 北京邻家科技有限公司</p>
+  </div>
+  <script type="text/html" id="city">
+    <dl>
+      <dt>热门城市</dt>
+      <dd>
+        {{each data}}
+        <a href="javascript:;">{{$value.name}}</a>
+        {{/each}}
+      </dd>
+    </dl>
+  </script>
+  <script type="text/javascript">
+    //分页请求
+    function fenye(page){
+        $.get('/getComment',{page:page},function (data) {
+          addStarImg(data)
+          setTime(data)
+          $('.commentList').html(template('scomm',{data:data}))
+        })
+    }
+    //星星
+    function addStarImg(data) {
+      for (var i = 0; i < data.length; i++) {
+        const starImgArr=[]
+        var evrystar=data[i].star
+        for (var j = 0; j < evrystar; j++) {
+          starImgArr.push('./images/service/red_star.png')
+        }
+        while(starImgArr.length<5){
+          starImgArr.push('./images/service/gray_star.png')
+        }
+        //将星星数组放在comments的属性上
+        data[i].starImgs=starImgArr
+      }
+    }
+
+
+    //时间
+    function setTime(data) {
+      for (var i = 0; i < data.length; i++) {
+        var time=data[i].createtime
+        template.defaults.imports.dateFormat = function(time, format){
+          return moment(time).format(format);
+        }
+      }
+    }
+
+    $(function () {
+
+      //头部动画和定位
+      $(document).scroll(function () {
+        if($(document).scrollTop() >=70){
+          $('#header').addClass('on')
+        }else {
+          $('#header').removeClass('on')
+        }
+      })
+      //城市请求
+      $.get('/getCity',function (data) {
+        $('.hotCity').append(template('city',{data:data}))
+      })
+      //item请求
+      $.get('/getItem',function (data) {
+        $('.sPro').append(template('sProject',{data:data}))
+      })
+      //comment请求
+      $.get('/getComment',function (data) {
+        addStarImg(data)
+        setTime(data)
+        $('.commentList').append(template('scomm',{data:data}))
+      })
+
+
+
+    })
+  </script>
+  <script type="text/html" id="sProject">
+    <img src={{data[0].imgUrl}} alt="">
+    <div class="text">
+      <p>{{data[0].name}}</p>
+      <p>{{data[0].desc}}</p>
+      <div class="price">
+        <b>{{data[0].price}}<em>元/小时</em></b>
+        <span>原价<em>{{data[0].oldPrice}}</em></span>
+      </div>
+    </div>
+    <span class="yishou">已售{{data[0].soldCount}}</span>
+  </script>
+  <script type="text/html" id="scomm">
+    {{each data}}
+    <div class="commentItem">
+      <img src={{$value.iconUrl}}>
+      <ul>
+        <li>{{$value.nick}}</li>
+        <li>
+          <span>
+            {{each $value.starImgs}}
+            <img src="{{$value}}" alt="">
+            {{/each}}
+          </span>
+          <em>{{$value.createtime | dateFormat 'YYYY-MM-DD'}}</em>
+        </li>
+        <li class="commentdetail">{{$value.comment}}</li>
+        <li class="commentposition">
+          <img src="./images/service/position.jpg" alt="">
+          {{$value.city}}  {{$value.area}}
+        </li>
+      </ul>
+    </div>
+    {{/each}}
+  </script>
+</body>
+</html>

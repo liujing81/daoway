@@ -1,0 +1,262 @@
+body,html
+  background #FBF8F8
+//头部样式
+header
+  width 100%
+  height 70px
+  background #fff
+  border-bottom 1px solid #e5e5e5
+  &.on
+    position fixed
+    animation:headPos 1s ease;
+    z-index 50
+    background rgba(255,255,255,.9)
+    top 0
+    box-shadow: 0 0 10px #ccc;
+    @keyframes headPos {
+      from {
+        transform translateY(-100%)
+      }
+      to {
+        transform translateY(0)
+      }
+    }
+  .headerWrap
+    box-sizing border-box
+    width 1200px
+    margin 0 auto
+    height 100%
+    z-index  999
+    padding  2.5px 15px
+    overflow hidden
+    .navLeft
+      height 100%
+      float left
+      a
+        width 280px
+        height 100%
+        display block
+        position relative
+        img
+          position absolute
+          top 0
+          bottom 0
+          left 0
+          right 0
+          margin auto
+    .navRight
+      height 100%
+      float right
+      ul
+        height 100%
+        line-height 70px
+        li
+          margin 0
+          float left
+          padding-right 30px
+          &.first
+            box-sizing border-box
+            padding 0 15px
+            margin-right 50px
+            a
+              span
+                color #4e4e4e
+                font-weight bold
+              img
+                vertical-align middle
+          a
+            color #4e4e4e
+            font-weight bold
+            &:hover
+              color #e94840
+          &.shangjia
+            a
+              width 64px
+              height 20px
+              color #fff
+              background #e94840
+              padding 4px 6px
+              border-radius 5px
+
+
+
+
+
+.h2
+  line-height 85px
+  width 1200px
+  margin 0 auto
+  font-size 18px
+  font-weight 600
+//中间内容
+.centerWrap
+  overflow hidden
+  width 1200px
+  margin 0 auto
+  .services
+    width 980px
+    float left
+    margin-bottom 50px
+    .tabList
+      display flex
+      flex-wrap wrap
+      justify-content space-around
+      a
+        background #fff
+        box-sizing border-box
+        display block
+        width 24%
+        float left
+        padding 10px
+        border 1px solid #eaeaea
+        cursor pointer
+        margin-bottom 10px
+        &:hover
+          box-shadow 5px 5px 10px #ccc
+        img
+          width 100%
+        .name
+          margin-top 15px
+          height 26px
+          line-height 26px
+          img
+            width 18px
+            margin-bottom 5px
+            margin-right 6px
+            vertical-align middle
+          i
+            font-style normal
+            font-size 16px
+            margin-left 0.1rem
+            font-weight 700
+            color #333
+        .order
+          font-size 12px
+          color #929292
+          height 26px
+          line-height 26px
+          margin 0
+          i
+            float right
+            font-style normal
+
+
+    .getMore
+      width 100%
+      margin 0 auto
+      height 152px
+      text-align center
+      &.dis
+        display none
+      span
+        width 200px
+        height 50px
+        line-height 50px
+        border 1px solid #e5e5e5
+        border-radius 5px
+        margin 50px 5px
+        background #fff
+        display inline-block
+        font-size 16px
+        color #b1b1b1
+        cursor pointer
+      img
+        margin-left -55px
+        vertical-align middle
+  .jiameng
+    float right
+    width 220px
+    height 304px
+    img
+      width 100%
+      height 100%
+      vertical-align middle
+    .erweima
+      width 100%
+      height 290px
+      background: url(../images/tuijianfuwushang_06.jpg) no-repeat center;
+      margin-top 10px
+      img
+        margin 50px 0 0 50px
+        width 130px
+        height 130px
+
+//保障
+.baozhang
+  text-align center
+  width 100%
+  padding-top 60px
+  background #fff
+  h2
+    font-size 30px
+    font-family "微软雅黑"
+    font-weight 800
+    margin-top 20px
+    margin-bottom 10px
+    i
+      font-style normal
+      color: #fb474f;
+      font-weight 800
+  p
+    font-size 22px
+    color #3d3838
+    margin 0
+//底部三个绿钩
+.servi
+  width 100%
+  padding-top 20px
+  background #fff
+  height 66px
+  font-family "微软雅黑"
+  ul
+    width 420px
+    margin 0 auto
+    display flex
+    text-align center
+    li
+      width 33.33%
+      font-size 18px
+      a
+        color #1d1515
+        img
+          vertical-align middle
+//热门城市
+.hotCity
+  width 100%
+  padding-top 50px
+  height 170px
+  background #fff
+  dl
+    width 1200px
+    margin 0 auto
+    dt
+      float left
+      font-family " 微软雅黑"
+      font-size 18px
+      font-weight 700
+    dd
+      margin-left 30px
+      width 1090px
+      line-height 30px
+      float left
+      a
+        font-size 16px
+        color #898989
+        display inline-block
+        width 9%
+        text-align center
+        font-weight 200
+        cursor pointer
+        font-family "微软雅黑"
+//版权
+.banquan
+  height 40px
+  line-height 40px
+  padding-top 0
+  width 100%
+  p
+    width 1200px
+    margin 0 auto
+    text-align left
+    color #898989
+    font-size 14px

@@ -1,0 +1,431 @@
+//头部样式
+header
+  width 100%
+  height 70px
+  background #fff
+  border-bottom 1px solid #e5e5e5
+  &.on
+    position fixed
+    animation:headPos 1s ease;
+    z-index 50
+    background rgba(255,255,255,.9)
+    top 0
+    box-shadow: 0 0 10px #ccc;
+    @keyframes headPos {
+      from {
+        transform translateY(-100%)
+      }
+      to {
+        transform translateY(0)
+      }
+    }
+  .headerWrap
+    box-sizing border-box
+    width 1200px
+    margin 0 auto
+    height 100%
+    z-index  999
+    padding  2.5px 15px
+    overflow hidden
+    .navLeft
+      height 100%
+      float left
+      a
+        width 280px
+        height 100%
+        display block
+        position relative
+        img
+          position absolute
+          top 0
+          bottom 0
+          left 0
+          right 0
+          margin auto
+    .navRight
+      height 100%
+      float right
+      ul
+        height 100%
+        line-height 70px
+        li
+          margin 0
+          float left
+          padding-right 30px
+          &.first
+            box-sizing border-box
+            padding 0 15px
+            margin-right 50px
+            a
+              span
+                color #4e4e4e
+                font-weight bold
+              img
+                vertical-align middle
+          a
+            color #4e4e4e
+            font-weight bold
+            &:hover
+              color #e94840
+          &.shangjia
+            a
+              width 64px
+              height 20px
+              color #fff
+              background #e94840
+              padding 4px 6px
+              border-radius 5px
+
+
+
+// 头部公告
+.sfWrap
+  margin 10px auto 0
+  background #fff
+  .sfdj
+    height 140px
+    line-height 140px
+    width 1200px
+    margin 0 auto
+    .sfLeft
+      float left
+      margin-left 20px
+      margin-top 10px
+      height 120px
+      b
+        font-size 36px
+        font-weight 700
+      i
+        margin-left 10px
+        color #929292
+        font-style normal
+        font-size 14px
+        &:nth-child(2)
+          em
+            color #121212
+        &:nth-child(3)
+          em
+            color #e84b47
+        em
+          font-style normal
+
+    .sfRight
+      float right
+      height 120px
+      margin-top 15px
+      display flex
+      div
+        width 100px
+        text-align center
+        line-height 22px
+        margin-top 52px
+        position relative
+        font-size 14px
+        i
+          font-style normal
+          display block
+          color #e84b47
+        em
+          font-style normal
+          color #e5e5e5
+          position absolute
+          top 10px
+          right 0
+//头部导航
+.sfNav
+  width 100%
+  height 40px
+  line-height 40px
+  background #323434
+  ul
+    width 1200px
+    margin 0 auto
+    overflow hidden
+    li
+      float left
+      width 140px
+      height 40px
+      color #fff
+      text-align center
+      display inline-block
+      &.active
+        background #424242
+//中间部分
+.centerWrap
+  width 1200px
+  overflow hidden
+  margin 0 auto
+  margin-top 22px
+  .centerLeft
+    float left
+    margin-bottom 50px
+    width 960px
+    background #fff
+    h3
+      border-bottom 1px solid #e5e5e5
+      margin-left 3%
+      height 60px
+      line-height 60px
+      span
+        border-bottom 4px solid #fb474f
+        padding-bottom 16px
+        cursor pointer
+        a
+          color #121212
+          font-size 16px
+      i
+        font-style normal
+        color #121212
+        margin-left 15px
+        font-size 14px
+    a:nth-child(2)
+      display block
+      height 201px
+      border-bottom 1px solid #e5e5e5
+      cursor pointer
+      &:hover
+        background-color #f8f8f8
+      img
+        margin 25px
+        border 1px solid #e5e5e5
+        float left
+        vertical-align middle
+        width 150px
+        height 150px
+      .text
+        margin-top 25px
+        width: 64%;
+        float: left;
+        p:nth-child(1)
+          font-size 18px
+          color #1d1515
+          line-height 42px
+          height 42px
+        p:nth-child(2)
+          color #929292
+          line-height 42px
+          height 42px
+          font-size 14px
+        .price
+          margin-top 20px
+          line-height 42px
+          height 42px
+          >b
+            font-size 30px
+            color #fc545e
+            font-weight 700
+            em
+              font-style normal
+              font-size 14px
+              font-weight 700
+          >span
+            margin-left 20px
+            font-size 14px
+            color #898989
+            em
+              font-style normal
+              text-decoration line-through
+              font-size 14px
+      .yishou
+        display inline-block
+        margin-top 150px
+        color #929292
+        font-size 14px
+    .blankBox
+      background #f8f8f8
+      height 70px
+    .company
+      span
+        display inline-block
+        height 40px
+        line-height 40px
+        font-size 18px
+        margin 10px 25px
+      img
+        display inline-block
+        margin-left -20px
+      p
+        line-height 28px
+        margin 0 25px 25px
+        font-size 16px
+
+
+    .commentList
+      .commentItem
+        width 96%
+        border-bottom 1px solid #e5e5e5
+        margin 0 3%
+        padding-top 20px
+        img
+          border-radius 6px
+          display inline-block
+          vertical-align top
+          width 40px
+          height 40px
+
+        ul
+          display inline-block
+          margin-left 20px
+          width 92%
+          li
+            border none
+            width auto
+            height auto
+            display block
+            padding 0
+            line-height 28px
+            margin 0
+            span
+              width 70px
+              margin-left 0
+              img
+                width 10px
+                height 10px
+                vertical-align middle
+            em
+              font-style normal
+              margin-left 10px
+              font-size 14px
+
+            &.commentdetail
+              line-height 26px
+              font-size 16px
+              margin-bottom 15px
+
+            &.commentposition
+              height 40px
+              color #898989
+              font-size 14px
+              img
+                margin-right 10px
+                vertical-align middle
+                width 9px
+                height 11px
+    .fenye
+      width 100%
+      margin 0 auto
+      height 152px
+      text-align center
+      a
+        color #121212
+        width 80px
+        height 30px
+        line-height 30px
+        font-size 14px
+        border 1px solid #e5e5e5
+        display inline-block
+        margin 50px 5px
+        background #fff
+        &.greycolor
+          color #929292
+      .showPage
+        display inline-block
+        a
+          height 30px
+          line-height 30px
+          border-radius 0
+          font-size 14px
+          color #121212
+          display inline-block
+          width 32px
+          &.active
+            background #fe454a
+            color #fff
+  .centerRight
+    margin-left 10px
+    float left
+    width 230px
+    .erweima
+      width: 100%;
+      height: 290px;
+      img
+        margin: 50px 0 0 50px;
+        width: 130px;
+        height: 130px;
+      &.erweimaTop
+        background url("../images/service/fuwushang2_07.jpg")
+        background-repeat no-repeat
+      &.erweimaBottom
+        margin-top 10px
+        background url("../images/service/tuijianfuwushang_06.jpg")
+        background-repeat no-repeat
+
+//保障
+.baozhang
+  text-align center
+  width 100%
+  padding-top 60px
+  background #fff
+  h2
+    font-size 30px
+    font-family "微软雅黑"
+    font-weight 800
+    margin-top 20px
+    margin-bottom 10px
+    i
+      font-style normal
+      color: #fb474f;
+      font-weight 800
+  p
+    font-size 22px
+    color #3d3838
+    margin 0
+//底部三个绿钩
+.servi
+  width 100%
+  padding-top 20px
+  background #fff
+  height 66px
+  font-family "微软雅黑"
+  ul
+    width 420px
+    margin 0 auto
+    display flex
+    text-align center
+    li
+      width 33.33%
+      font-size 18px
+      a
+        color #1d1515
+        img
+          vertical-align middle
+//热门城市
+.hotCity
+  width 100%
+  padding-top 50px
+  height 170px
+  background #fff
+  dl
+    width 1200px
+    margin 0 auto
+    dt
+      float left
+      font-family " 微软雅黑"
+      font-size 18px
+      font-weight 700
+    dd
+      margin-left 30px
+      width 1090px
+      line-height 30px
+      float left
+      a
+        font-size 16px
+        color #898989
+        display inline-block
+        width 9%
+        text-align center
+        font-weight 200
+        cursor pointer
+        font-family "微软雅黑"
+//版权
+.banquan
+  height 40px
+  line-height 40px
+  padding-top 0
+  width 100%
+  p
+    width 1200px
+    margin 0 auto
+    text-align left
+    color #898989
+    font-size 14px
